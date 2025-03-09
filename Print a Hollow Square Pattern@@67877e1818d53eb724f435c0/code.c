@@ -8,6 +8,6 @@ int main()
             if(i==0||i==N||j==0||j==N){
                 printf("* ");
             }else{printf(" ");}
-        }
+        }printf("\n");
     }return 0;
 }
