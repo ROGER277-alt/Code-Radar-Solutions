@@ -4,12 +4,17 @@ int main()
 {
     int N,i,k,j;
     scanf("%d",&N);
-    for( i=1;i<=N;i++){
-        for( k=i;k<N;k++){
+    for(i = 1; i <= n; i++) {
+        // Print spaces for the left part of the pyramid
+        for(j = i; j < n; j++) {
             printf(" ");
         }
-        for(int j=1;j<=(2*i-1);j++){
-            printf("%d ",j);
-        }printf("\n");
-    }return 0;
-}
+        
+        // Print numbers for the pyramid's actual body
+        for(k = 1; k <= (2*i - 1); k++) {
+            printf("%d", k);
+        }
+        
+        // Move to the next line after each row
+        printf("\n");
+    }
