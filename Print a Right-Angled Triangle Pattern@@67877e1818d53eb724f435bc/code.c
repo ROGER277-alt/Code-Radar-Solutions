@@ -1,5 +1,5 @@
 // Your code here...
-int mian()
+int main()
 {
     int n;
     scanf("%d",&n);
