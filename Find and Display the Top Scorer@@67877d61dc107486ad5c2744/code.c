@@ -1,4 +1,5 @@
 // Your code here...
+#include<stdio.h>
 struct students {
     int rollno;
     char name[50];
