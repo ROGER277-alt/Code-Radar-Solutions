@@ -9,7 +9,6 @@ int main()
 };
 struct student stud[1000];
 int n;
-printf("Enter number of student: ");
 scanf("%d",&n);
 for(int i=0;i<n;i++){
     scanf("%d",&stud[i].rollno);
@@ -19,7 +18,7 @@ for(int i=0;i<n;i++){
 for(int i=0;i<n;i++){
     printf("Roll Number: %d",stud[i].rollno);
     printf("Name: %s",stud[i].name);
-    printf("Marks: %f",stud[i].attendence);
+    printf("Marks: .2%f",stud[i].attendence);
 }
 return 0;
 }
