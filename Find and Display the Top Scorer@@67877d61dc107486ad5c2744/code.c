@@ -12,5 +12,5 @@ int main()
         scanf("%d %d %d",&students[i].rollno, students[i]name ,students[i]marks);
         if(i==0|| students[i]> topscorer.marks){topscorer = students[i];}
     }
-    printf("topscorer")
+    printf("topscorer: Roll Number: %d, Name: %s, Marks: %f",topscorer.rollno, topscorer.name, topscorer.marks)
 }
