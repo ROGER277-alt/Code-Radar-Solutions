@@ -13,4 +13,5 @@ int main()
         if(i==0|| students[i]> topscorer.marks){topscorer = students[i];}
     }
     printf("topscorer: Roll Number: %d, Name: %s, Marks: %.2f",topscorer.rollno, topscorer.name, topscorer.marks)
+    return 0;
 }
