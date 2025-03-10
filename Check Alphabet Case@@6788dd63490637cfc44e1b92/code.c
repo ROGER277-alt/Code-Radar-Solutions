@@ -7,4 +7,4 @@ if(n >= 'A' && n <= 'Z'){
     printf("Uppercase");
 }else if(n>='a' && n<='z'){
     printf("Lowercase");
-}else{printf("not defined");}return 0;}
+}else{printf("Not a alphabet");}return 0;}
