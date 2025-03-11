@@ -8,9 +8,9 @@ int main() {
 
     // Check if the number is between 1 and 100
     if (num >= 1 && num <= 100) {
-        printf("The number %d is between 1 and 100.\n", num);
+        printf("In Range");
     } else {
-        printf("The number %d is not between 1 and 100.\n", num);
+        printf("Out of Range");
     }
 
     return 0;
