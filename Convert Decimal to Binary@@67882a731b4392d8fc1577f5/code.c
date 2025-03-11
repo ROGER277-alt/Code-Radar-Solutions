@@ -27,9 +27,6 @@ void decimalToBinary(int num) {
 
 int main() {
     int num;
-
-    // Ask for user input
-    printf("Enter a decimal number: ");
     scanf("%d", &num);
 
     // Call the function to print binary representation
