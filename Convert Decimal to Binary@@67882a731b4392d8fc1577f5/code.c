@@ -30,7 +30,7 @@ int main() {
     scanf("%d", &num);
 
     // Call the function to print binary representation
-    printf("Binary equivalent: ");
+    printf(" ");
     decimalToBinary(num);
     printf("\n");
 
