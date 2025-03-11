@@ -8,9 +8,9 @@ int main() {
 
     // Check if num2 is the square of num1
     if (num1 * num1 == num2) {
-        printf("%d is the square of %d.\n", num2, num1);
+        printf("Yes");
     } else {
-        printf("%d is not the square of %d.\n", num2, num1);
+        printf("No");
     }
 
     return 0;
