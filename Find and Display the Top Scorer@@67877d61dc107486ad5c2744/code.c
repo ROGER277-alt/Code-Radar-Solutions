@@ -1,18 +1,36 @@
 // Your code here...
-#include<stdio.h>
-struct students {
+// Your code here...
+#include <stdio.h>
+
+struct Student {
     int rollno;
     char name[50];
     float marks;
 };
-int main()
-{
-    int N;
-    scanf("No of students: %d",N);
-    for(int i=0;i<=n;i++){
-        scanf("%d %d %d",&students[i].rollno, students[i]name ,students[i]marks);
-        if(i==0|| students[i]> topscorer.marks){topscorer = students[i];}
+
+int main() {
+    int n;
+    
+    // Read number of students
+    scanf("%d", &n);
+    struct Student students[n];
+
+    // Read student details
+    for (int i = 0; i < n; i++) {
+        scanf("%d %s %f", &students[i].rollno, students[i].name, &students[i].marks);
     }
-    printf("topscorer: Roll Number: %d, Name: %s, Marks: %.2f",topscorer.rollno, topscorer.name, topscorer.marks)
+
+    // Find the top scorer
+    struct Student topScorer = students[0];
+    for (int i = 1; i < n; i++) {
+        if (students[i].marks > topScorer.marks) {
+            topScorer = students[i];
+        }
+    }
+
+    // Print the top scorer details in the required format
+    printf("Top Scorer: Roll Number: %d, Name: %s, Marks: %.2f\n", 
+           topScorer.rollno, topScorer.name, topScorer.marks);
+
     return 0;
 }
