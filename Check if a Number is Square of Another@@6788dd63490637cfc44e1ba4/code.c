@@ -1,17 +1,11 @@
-#include<stdio.h>
-int main() {
-    int num1, num2;
-
-    // Ask for user input
-    scanf("%d", &num1);
-    scanf("%d", &num2);
-
-    // Check if num2 is the square of num1
-    if (num1 * num1 == num2) {
+#include <stdio.h>
+int main(){
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if (a/b==b){
         printf("Yes");
-    } else {
+    }
+    else{
         printf("No");
     }
-
-    return 0;
 }
