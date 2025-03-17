@@ -2,7 +2,7 @@
 #include <string.h>
 int main(){
     char n[100];
-    scanf("%s",&n);
+    gets(n);
     printf("%s",strrev(n));
     return 0;
 
