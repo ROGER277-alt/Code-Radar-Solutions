@@ -3,8 +3,7 @@
 int main(){
     char n[100];
     scanf("%s",&n);
-    strrev(n);
-    printf("%s",n);
+    printf("%s",strrev(n));
     return 0;
 
 }
