@@ -12,6 +12,6 @@ int main()
     n[i]=n[len-i-1];
     n[len-i-1]=temp;
    }
-   printf("Reversed string: %s\n",n);
+   printf("%s\n",n);
    return 0;
 }
