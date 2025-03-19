@@ -1,23 +1,14 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-// Function to rotate the array by d positions to the right
-void rotateArray(int arr[], int n, int d) {
-    int temp[d];
-
-    // Store the last d elements in temp array
-    for (int i = 0; i < d; i++) {
-        temp[i] = arr[n - d + i];
+// Function to check if the array is sorted in ascending order
+bool isArraySorted(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;  // If any element is greater than the next, it's not sorted
+        }
     }
-
-    // Shift the rest of the array to the right
-    for (int i = n - 1; i >= d; i--) {
-        arr[i] = arr[i - d];
-    }
-
-    // Copy the d elements from temp to the front of the array
-    for (int i = 0; i < d; i++) {
-        arr[i] = temp[i];
-    }
+    return true;  // If no elements are out of order, the array is sorted
 }
 
 // Function to print the array
@@ -29,17 +20,18 @@ void printArray(int arr[], int size) {
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int arr[] = {1, 2, 3, 4, 5};  // Example sorted array
     int n = sizeof(arr) / sizeof(arr[0]);
-    int d = 3; // Number of positions to rotate
 
-    printf("Original array: ");
+    printf("Array: ");
     printArray(arr, n);
 
-    rotateArray(arr, n, d);
-
-    printf(" ");
-    printArray(arr, n);
+    // Check if the array is sorted
+    if (isArraySorted(arr, n)) {
+        printf("The array is sorted in ascending order.\n");
+    } else {
+        printf("The array is not sorted in ascending order.\n");
+    }
 
     return 0;
 }
