@@ -23,14 +23,12 @@ int main() {
     int arr[] = {1, 2, 3, 4, 5};  // Example sorted array
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    printf("Array: ");
-    printArray(arr, n);
 
     // Check if the array is sorted
     if (isArraySorted(arr, n)) {
-        printf("sorted");
+        printf("Sorted");
     } else {
-        printf("Not sorted");
+        printf("Not Sorted");
     }
 
     return 0;
