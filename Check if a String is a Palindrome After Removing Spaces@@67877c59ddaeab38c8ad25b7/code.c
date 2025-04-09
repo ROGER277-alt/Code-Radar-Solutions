@@ -1,19 +1,33 @@
-// Your code here...
-#include<stdio.h>
-#include<string.h>
-#include<ctype.h>
-int main(){
-    char str[100];
-    char rev[100];
-    scanf("%[^\n]",str);
-    int n=strlen(str);
-    for(int i=n-1;i>=0;i--){
-       rev[i]=str[n-i-1];
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[100], cleaned[100];
+    scanf("%[^\n]", str); 
+    int j = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+            cleaned[j++] = tolower(str[i]);
+        }
     }
-    rev[n]='\0';
-    if(strcmp(rev,str)==0){
-        printf("Yes");
-    }else{
-        printf("No");
+    cleaned[j] = '\0'; 
+    int left = 0, right = strlen(cleaned) - 1;
+    int isPalindrome = 1;
+
+    while (left < right) {
+        if (cleaned[left] != cleaned[right]) {
+            isPalindrome = 0;
+            break;
+        }
+        left++;
+        right--;
     }
+    if (isPalindrome) {
+        printf("Yes\n");
+    } else {
+        printf("No\n");
+    }
+
+    return 0;
 }
