@@ -3,7 +3,11 @@
 int main() {
     char text[100];
     int shift;
+
+    printf("Enter UPPERCASE text: ");
     scanf("%s", text);
+
+    printf("Enter shift: ");
     scanf("%d", &shift);
 
     for (int i = 0; text[i] != '\0'; i++) {
