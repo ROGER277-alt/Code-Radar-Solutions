@@ -4,6 +4,8 @@
 int main() {
     char str[100];
     int i, start, end, len;
+
+
     fgets(str, sizeof(str), stdin);
 
     // Remove newline if present
