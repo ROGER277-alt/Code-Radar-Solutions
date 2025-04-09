@@ -1,21 +1,37 @@
-#include<stdio.h>
-#include<string.h>
-int main(){
-    char str[100],word1[30],word2[30];
-    scanf("%[^\n]",str);
-    scanf(str,"%s %s",word1,word2);
-    int n1=strlen(word1);
-    int n2=strlen(word2);
-    for(int i=0;i<n1/2;i++){
-        char temp=word1[i];
-        word1[i]=word1[n1-i-1];
-        word1[n1-i-1]=temp;
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+// Function to reverse words in a string
+void reverseWords(char *str) {
+    char *words[100];  // Array to store pointers to words
+    int count = 0;
+
+    // Tokenize the string into words
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        words[count++] = token;
+        token = strtok(NULL, " ");
     }
-    for(int i=0;i<n2/2;i++){
-        char temp=word2[i];
-        word2[i]=word2[n2-i-1];
-        word2[n2-i-1]=temp;
+
+    // Print words in reverse order
+    for (int i = count - 1; i >= 0; i--) {
+        printf("%s", words[i]);
+        if (i != 0) printf(" ");
     }
-    printf("%s %s",word1,word2);
+    printf("\n");
+}
+
+int main() {
+    char input[1000];
+
+    
+    fgets(input, sizeof(input), stdin);
+
+    // Remove trailing newline if present
+    input[strcspn(input, "\n")] = 0;
+
+    reverseWords(input);
+
     return 0;
 }
