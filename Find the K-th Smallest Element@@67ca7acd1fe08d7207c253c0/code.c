@@ -2,15 +2,11 @@
 
 int main() {
     int a[100], n, k, i, j, temp;
-
-    printf("Enter number of elements: ");
     scanf("%d", &n);
-
-    printf("Enter %d numbers:\n", n);
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-    printf("Enter K: ");
+    
     scanf("%d", &k);
 
     // Simple sorting (bubble sort)
