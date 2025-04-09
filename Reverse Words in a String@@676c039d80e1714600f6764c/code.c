@@ -17,4 +17,5 @@ int main(){
         word2[n2-i-1]=temp;
     }
     printf("%s %s",word1,word2);
+    return 0;
 }
