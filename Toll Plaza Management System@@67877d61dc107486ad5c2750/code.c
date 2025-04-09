@@ -1,4 +1,4 @@
-// Your code here...#include<stdio.h>
+#include<stdio.h>
 #include<string.h>
 typedef struct vehicle{
     char number[50];
