@@ -2,7 +2,7 @@
 
 int main() {
     char text[100];
-    int shift;
+    int i, shift;
 
     printf("Enter UPPERCASE text: ");
     scanf("%s", text);
@@ -10,10 +10,8 @@ int main() {
     printf("Enter shift: ");
     scanf("%d", &shift);
 
-    for (int i = 0; text[i] != '\0'; i++) {
-        if (text[i] >= 'A' && text[i] <= 'Z') {
-            text[i] = ((text[i] - 'A' + shift) % 26) + 'A';
-        }
+    for (i = 0; text[i] != '\0'; i++) {
+        text[i] = ((text[i] - 'A' + shift) % 26) + 'A';
     }
 
     printf("Encrypted: %s\n", text);
